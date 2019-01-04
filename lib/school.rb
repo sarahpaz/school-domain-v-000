@@ -9,7 +9,7 @@ class School
   end
 
   def add_student(student_name, grade)
-    @roster[grade] ||= []
+    @roster[grade] ||= [] # you have to first check if the roster has a key of grade, or else the line below will throw an error. But if roster[grade] is not truthy, you will assign its value an empty array, so the line below will work. 
     @roster[grade] << student_name
   end
 
